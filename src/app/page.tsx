@@ -193,7 +193,7 @@ function Brute({ account, password, setAccount }: BruteProps) {
                   informations précieuses.
                 </p>
                 <br></br>
-                <a
+                <a target="_blank"
                   className="text-cyan-400 flex gap-2 justify-center items-center"
                   href="https://www.francenum.gouv.fr/magazine-du-numerique/combien-de-temps-un-pirate-met-il-pour-trouver-votre-mot-de-passe-comment"
                 >
@@ -267,7 +267,7 @@ function Brute({ account, password, setAccount }: BruteProps) {
                   {acc}&apos;--
                 </span>
               </span>
-              <a
+              <a target="_blank"
                 className="text-cyan-400 flex gap-2 justify-center items-center"
                 href="https://openclassrooms.com/fr/courses/7727176-realisez-un-test-dintrusion-web/7917166-attaquez-la-base-de-donnees-avec-les-injections-sql"
               >
@@ -286,28 +286,28 @@ function Brute({ account, password, setAccount }: BruteProps) {
               cybersecurite
             </p>
             <div className="h-1/3 flex flex-col gap-12">
-              <a
+              <a target="_blank"
                 className="text-cyan-400 flex gap-2 justify-center items-center"
                 href="https://www.cisco.com/c/fr_ca/products/security/common-cyberattacks.html"
               >
                 <GoCommandPalette /> Quelles sont les cyberattaques les plus
                 courantes?
               </a>
-              <a
+              <a target="_blank"
                 className="text-cyan-400 flex gap-2 justify-center items-center"
                 href="https://www.economie.gouv.fr/particuliers/dix-regles-pour-vous-premunir-piratage-donnees"
               >
                 <GoCommandPalette /> Dix règles pour vous prémunir contre le
                 piratage de vos données personnelles
               </a>
-              <a
+              <a target="_blank"
                 className="text-cyan-400 flex gap-2 justify-center items-center"
                 href="https://www.youtube.com/watch?v=pQCT2ZnpHfY"
               >
                 <GoCommandPalette /> Comment pirater un streamer grâce à son
                 chat
               </a>
-              <a
+              <a target="_blank"
                 className="text-cyan-400 flex gap-2 justify-center items-center"
                 href="https://www.youtube.com/watch?v=m0FLBbdvThY"
               >
