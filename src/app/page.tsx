@@ -78,7 +78,7 @@ function Brute({ account, password, setAccount }: BruteProps) {
     if (passAttempt === password) {
       setIsCracking(false);
     }
-  }, [passAttempt]);
+  }, [passAttempt, password]);
 
   // Fonction pour introduire un délai
   const delay = (ms: any) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -142,16 +142,16 @@ function Brute({ account, password, setAccount }: BruteProps) {
                   Imaginez que vous avez un cadenas et une trousse pleine de
                   clés de toutes formes et tailles. Vous ne savez pas quelle clé
                   ouvre le cadenas, mais vous êtes déterminé à le déverrouiller.
-                  Une attaque par force brute, c'est un peu comme si vous
-                  essayiez chaque clé, une par une, jusqu'à ce que vous trouviez
+                  Une attaque par force brute, c&apos;est un peu comme si vous
+                  essayiez chaque clé, une par une, jusqu&apos;à ce que vous trouviez
                   celle qui ouvre le cadenas.
                   <br />
                   <br />
-                  Dans le monde numérique, le "cadenas" est souvent un mot de
-                  passe protégeant l'accès à des informations ou des comptes en
-                  ligne. L'"attaque par force brute" est donc le processus qui
+                  Dans le monde numérique, le &quot;cadenas&quot; est souvent un mot de
+                  passe protégeant l&apos;accès à des informations ou des comptes en
+                  ligne. L&apos;&quot;attaque par force brute&quot; est donc le processus qui
                   consiste à essayer systématiquement toutes les combinaisons
-                  possibles de lettres, chiffres et symboles jusqu'à trouver le
+                  possibles de lettres, chiffres et symboles jusqu&apos;à trouver le
                   bon mot de passe.
                   <br />
                   <br />
@@ -159,29 +159,29 @@ function Brute({ account, password, setAccount }: BruteProps) {
                 </p>
                 <ol>
                   <li>
-                    La trousse de clés : C'est l'ensemble des caractères
-                    possibles que l'on peut utiliser dans un mot de passe
+                    La trousse de clés : C&apos;est l&apos;ensemble des caractères
+                    possibles que l&apos;on peut utiliser dans un mot de passe
                     (lettres majuscules et minuscules, chiffres, symboles).
                   </li>
                   <li>
-                    Le processus d'essai : Commencer par la combinaison la plus
-                    simple (comme "a") et continuer en augmentant la complexité
-                    (passant à "b", puis "c", jusqu'à arriver à des combinaisons
-                    plus longues et complexes comme "a1!B@" et bien au-delà).
+                    Le processus d&apos;essai : Commencer par la combinaison la plus
+                    simple (comme &quot;a&quot;) et continuer en augmentant la complexité
+                    (passant à &quot;b&quot;, puis &quot;c&quot;, jusqu&apos;à arriver à des combinaisons
+                    plus longues et complexes comme &quot;a1!B@&quot; et bien au-delà).
                   </li>
                   <li>
-                    Trouver la bonne clé : Le processus continue jusqu'à ce que
+                    Trouver la bonne clé : Le processus continue jusqu&apos;à ce que
                     la bonne combinaison soit trouvée, ouvrant ainsi le
-                    "cadenas" et donnant accès au compte ou à l'information
+                    &quot;cadenas&quot; et donnant accès au compte ou à l&apos;information
                     protégée.
                   </li>
                 </ol>
                 <p>
-                  Pourquoi est-il important d'avoir un mot de passe complexe ?
+                  Pourquoi est-il important d&apos;avoir un mot de passe complexe ?
                   Plus votre mot de passe est long et complexe (comme une clé
-                  avec beaucoup de dents uniques), plus il y aura de "clés"
+                  avec beaucoup de dents uniques), plus il y aura de &quot;clés&quot;
                   (combinaisons possibles) à essayer pour trouver la bonne. Cela
-                  rend la tâche extrêmement difficile et longue pour quelqu'un
+                  rend la tâche extrêmement difficile et longue pour quelqu&apos;un
                   tentant une attaque par force brute, décourageant ainsi les
                   tentatives ou les rendant pratiquement impossibles à réaliser
                   dans un laps de temps raisonnable.
@@ -219,20 +219,20 @@ function Brute({ account, password, setAccount }: BruteProps) {
                 />
               </div>
               <p className="text-yellow-300 text-center">
-                L'objectif ici est de manipuler la condition ci-dessous pour se
+                L&apos;objectif ici est de manipuler la condition ci-dessous pour se
                 connecter.<br></br>
                 <span className="text-yellow-300 text-center">
-                  La condition signifie: "Recuperer toutes les informations (*)
-                  de l'utilisateur dont le nom de compte est égale à
-                  'votre_nom_de_compte' et le mot de passe est égale à
-                  'votre_mot_de_passe'"
+                  La condition signifie: &quot;Recuperer toutes les informations (*)
+                  de l&apos;utilisateur dont le nom de compte est égale à
+                  &apos;votre_nom_de_compte&apos; et le mot de passe est égale à
+                  &apos;votre_mot_de_passe&apos;&quot;
                 </span>
                 <br></br>
               </p>
               <p className="text-center text-white">
                 Connexion au compte:{" "}
                 <span className="text-amber-400">
-                  SELECT * FROM user where username = '{account}
+                  SELECT * FROM user where username = &apos;{account}
                   <span
                     className={
                       account.includes("'") && account.includes("--")
@@ -240,30 +240,31 @@ function Brute({ account, password, setAccount }: BruteProps) {
                         : ""
                     }
                   >
-                    ' and password = '{password}'
+                    &apos; and password = &apos;{password}&apos;
                   </span>
                 </span>
               </p>
               <p className="text-center text-slate-400">
-                Ce qu'on remarque, c'est que dans la condition de connexion
+                Ce qu&apos;on remarque, c&apos;est que dans la condition de connexion
                 <br></br>
-                Le nom de compte se situe entre guillemet simple " ' "<br></br>
+                Le nom de compte se situe entre guillemet simple &quot; &apos; &quot;<br></br>
                 Tout ce qui sera entre ces guillemets sera considéré comme un
                 nom de compte<br></br>
-                Et le mot de passe se situe aussi entre guillemet simple " ' "
+                Et le mot de passe se situe aussi entre guillemet simple &quot; &apos; &quot;
                 <br></br>
-                Le reste (en dehors des guillemets) c'est du code, qu'on va
+                Le reste (en dehors des guillemets) c&apos;est du code, qu&apos;on va
                 pouvoir exploiter.<br></br>
-                Pour ce faire on va simplement tenter d'effacer la condition de
-                mot de passe en utilisant le caractère " ' " et le caractère
-                "--" qui signifie "commentaire" en SQL.<br></br>
+                
                 Vous pouvez chercher la solution par vous meme ou mettre votre
                 souris sur le bouton ci-dessous pour voir la solution.<br></br>
               </p>
-              <span className="border p-2 group text-opacity-0 hover:text-opacity-100 hover:bg-transparent text-sky-300">
+              <span className="text-center border p-2 group text-opacity-0 hover:text-opacity-100 hover:bg-transparent text-sky-300">
+              Pour ce faire on va simplement tenter d&apos;effacer la condition de
+                mot de passe en utilisant le caractère &quot; &apos; &quot; et le caractère
+                &quot;--&quot; qui signifie &quot;commentaire&quot; en SQL.<br></br>
                 On va donc tenter de se connecter avec le nom de compte suivant:{" "}
                 <span className="text-amber-400 text-opacity-0 group-hover:text-opacity-100">
-                  {acc}'--
+                  {acc}&apos;--
                 </span>
               </span>
               <a
@@ -275,9 +276,9 @@ function Brute({ account, password, setAccount }: BruteProps) {
             </div>
           </div>
           <div className="h-full w-full flex flex-col justify-center items-center gap-4 px-12">
-            <h1 className="text-gray-400 text-2xl">Plus d'informations</h1>
+            <h1 className="text-gray-400 text-2xl">Plus d&apos;informations</h1>
             <p className="text-center text-gray-300">
-              Il existe beaucoup trop de types d'attaques et les exemples soumis
+              Il existe beaucoup trop de types d&apos;attaques et les exemples soumis
               ici reste suffisamment parlant pour vous sensibiliser a la
               cybersecurite
               <br />
@@ -326,13 +327,13 @@ function Brute({ account, password, setAccount }: BruteProps) {
               methodes de piratage pour pouvoir se proteger
               <br />
               <br />
-              Merci d'avoir participe a cette experience
+              Merci d&apos;avoir participe a cette experience
             </p>
             <p className="group border text-center bg-slate-600 p-2 text-opacity-0 hover:text-opacity-100 text-sky-300">
-              Bien evidemment, les "sponsors" situe en bas sont entierements
+              Bien evidemment, les &quot;sponsors&quot; situe en bas sont entierements
               faux, le but etait de vous poussez a entrer un nom de compte et
               mot de passe reel.<br></br>
-              Pas de risque ici, vos donnees n'ont pas ete enregistrees mais ca
+              Pas de risque ici, vos donnees n&apos;ont pas ete enregistrees mais ca
               aurait pu etre le cas si vous etiez tombe sur un vrai site
               malveillant.<br></br>
               <br></br>
@@ -343,17 +344,14 @@ function Brute({ account, password, setAccount }: BruteProps) {
               <p className="text-center text-opacity-0 group-hover:text-opacity-100 text-pink-500">
                 ATTENTION<br></br>
                 IL EST BIEN EVIDEMMENT INTERDIT DE REPRODUIRE QUOI QUE CE SOIT
-                QUE VOUS AVEZ VU ICI, IL S'AGIT UNIQUEMENT D'EXEMPLE POUR VOUS
+                QUE VOUS AVEZ VU ICI, IL S&apos;AGIT UNIQUEMENT D&apos;EXEMPLE POUR VOUS
                 AIDER A COMPRENDRE LES ENJEUX DE LA CYBERSECURITE<br></br>
                 IL ETAIT IMPORTANT DE COMPRENDRE COMMENT FONCTIONNE LES ATTAQUES
-                POUR POUVOIR S'EN DEFENDRE.<br></br>
+                POUR POUVOIR S&apos;EN DEFENDRE.<br></br>
               </p>
             </p>
             <p className="group border text-center bg-slate-600 p-2 text-opacity-0 hover:text-opacity-100 text-sky-300">
-              PS: Faites pas attention aux fautes d'ortographe et surtout aux
-              manques d'accents par moment, j'ecris avec un clavier anglais qui
-              n'en a pas...<br></br>
-              Bon courage pour votre soutenance de stage <GiDinosaurRex />
+              PS: Bon courage pour votre soutenance de stage <GiDinosaurRex />
             </p>
           </div>
         </div>
